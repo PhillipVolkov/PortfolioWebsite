@@ -11,9 +11,7 @@
 
   background: #000;/*linear-gradient(235deg, #110007 0%, #000 100%);*/
 
-  border-bottom-style: solid;
-  border-color: #2A282A;
-  z-index:-2;
+  z-index:-1;
 
   color: #E0E0E1;
 }
@@ -28,14 +26,12 @@
 .Down-Button {
   position: absolute;
   bottom: 10px;
-  
-  background: none;
-  border: none;
+
   cursor: pointer;
 }
 
 .Down-Arrow {
-  border: solid #2A282A;
+  border: solid #E0E0E1;
   border-width: 0 3px 3px 0;
   display: inline-block;
   padding: 3px;

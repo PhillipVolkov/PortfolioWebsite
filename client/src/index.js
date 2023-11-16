@@ -7,10 +7,14 @@ import reportWebVitals from './reportWebVitals';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Splash />
+    <div id="home" className="page">
+      <Splash />
+    </div>
 
-    <div>
-      <p>Here</p>
+    <div id="about" className="page">
+      <div className='container'>
+        <p>Here</p>
+      </div>
     </div>
   </React.StrictMode>
 );
