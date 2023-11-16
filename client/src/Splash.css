@@ -9,7 +9,7 @@
   font-size: calc(10px + 2vmin);
   user-select: none;
 
-  background: #fff;/*linear-gradient(235deg, #110007 0%, #000 100%);*/
+  background: #000;/*linear-gradient(235deg, #110007 0%, #000 100%);*/
 
   border-bottom-style: solid;
   border-color: #2A282A;
