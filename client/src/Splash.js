@@ -1,6 +1,7 @@
 import React from 'react'
 import './Splash.css';
 import './index.css';
+import profilePicture from './profile_picture.JPEG'
 
 // Canvas for drawing the splash screen animation
 const Canvas = props => {
@@ -44,8 +45,9 @@ const Canvas = props => {
         max: max amount of particles to be generated
         interval: sets interval (ms) of when to emit particles,
         numEmit: amount of which determined by numEmit
+        startTime: time at which to spawn in particle
     */
-    const emittorOptions = {max:50, interval:200, numEmit:4}
+    const emittorOptions = {max:50, interval:200, numEmit:4, startTime:150}
     /*
       options for particle colors that emittor can choose from
     */
@@ -69,7 +71,7 @@ const Canvas = props => {
         prevTheta = randTheta
 
         const randColor = Math.floor(Math.random()*(colorMap.length))
-        particles.push({time:0, theta:randTheta, color:colorMap[randColor], past:[], done:false, removed:false})
+        particles.push({time:emittorOptions.startTime, theta:randTheta, color:colorMap[randColor], past:[], done:false, removed:false})
       }
     }
 
@@ -80,9 +82,10 @@ const Canvas = props => {
         frequency: frequency of sine wave
         trail: length of the particle trail (number of frames)
         trailResolution: how accurately the trail is rendered (how many frames to skip, 1 is lowest)
-        life: duration of particle (number of frames)
+        lifeMin: minimum duration of particle (number of frames)
+        lifeMax: maximum duration of particle (number of frames)
     */
-    const particleOptions = {size:20, magnitude:[50,50], frequency:0.025, trail:150, trailResolution:5, life:300}
+    const particleOptions = {size:20, magnitude:[50,50], frequency:0.025, trail:150, trailResolution:5, lifeMin:250, lifeMax:500}
     /*
       animation draw function:
     */
@@ -125,10 +128,11 @@ const Canvas = props => {
       // draw each particle
       for (let i = 0; i < particles.length; i++) {
         // draw trail
-        const startJ = Math.max(0, particles[i].time-particleOptions.trail)
+        const startJ = Math.max(0, particles[i].time-particleOptions.trail - emittorOptions.startTime)
         let [startX,startY] = [0,0]
         if (particles[i].past.length !== 0 && !(startJ === particles[i].past.length)) {
-          [startX,startY] = [particles[i].past[startJ].x, particles[i].past[startJ].y]
+          startX = particles[i].past[startJ].x
+          startY = particles[i].past[startJ].y
           for (let j = startJ; j < particles[i].past.length-1; j+=particleOptions.trailResolution) {
             drawTrail(i, j, startJ, [startX, startY])
             startX = particles[i].past[j].x
@@ -148,8 +152,13 @@ const Canvas = props => {
           drawParticle([x,y], [startX,startY], particles[i].color, particleOptions.size, 1)
 
           particles[i].past.push({x,y})
-
-          if (particles[i].time === particleOptions.life-1) particles[i].done = true
+          
+          if (particles[i].time === particleOptions.lifeMax-1) particles[i].done = true
+          else if (particles[i].time > particleOptions.lifeMin) {
+            const rand = Math.random()
+            const thresHold = 1/(particleOptions.lifeMax-particleOptions.lifeMin)
+            particles[i].done = rand < thresHold
+          }
           particles[i].time++
         }
         else particles[i].time ++
@@ -179,13 +188,17 @@ const Canvas = props => {
 function Splash() {
   return (
     <div className="Splash">
-      <div className="card" style={{"background":"#000"}}>
-        Hello! I'm Phillip Volkov.
+      <div className="card" style={{"background":"#2A282A"}}>
+        <img src={profilePicture} className='Circle-Photo'></img>
+        <h1>Phillip Volkov</h1>
+        <p>Student @ The University of Washington - Seattle</p>
+        <p>Majoring in Computer Science</p>
+        <p>Graduating June 2025</p>
       </div>
 
       <Canvas />
 
-      <a className="Down-Button" href="#about"><i className="Down-Arrow"></i></a>
+      <a className="Down-Button Down-Arrow" href="#about"></a>
     </div>
   );
 }

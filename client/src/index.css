@@ -6,10 +6,13 @@
  Text:        #2A282A
  Card:        #D4C4B0
  Outline:     #000000
- Accent 1:    #48C1C3
- Accent 2:    #EE2A7D
+ Accents:     #152b65, #2388d2, #a80874, #f48020"
 
 */
+
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   margin: 0;
@@ -58,6 +61,14 @@ code {
 }
 
 .container {
-  border: solid blue;
+ /* border: solid #48C1C3;*/
   padding: 0 20% 0px 20%;
+}
+
+h1 {
+  font-size: 48px;
+}
+
+p {
+  font-size: 18px;
 }
