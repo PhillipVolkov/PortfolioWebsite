@@ -1,6 +1,5 @@
 import React from 'react'
 import './Splash.css';
-import './index.css';
 import profilePicture from './profile_picture.JPEG'
 
 // Canvas for drawing the splash screen animation

@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import Splash from './Splash';
+import Splash from './Splash/Splash';
+import ProjectsDirectory from './ProjectsDirectory/ProjectsDirectory';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -12,9 +13,7 @@ root.render(
     </div>
 
     <div id="about" className="page">
-      <div className='container'>
-        <p>Here</p>
-      </div>
+      <ProjectsDirectory />
     </div>
   </React.StrictMode>
 );
