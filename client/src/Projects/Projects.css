@@ -1,0 +1,38 @@
+button {
+    background-color: #2A282A;
+    color:#E0E0E1;
+
+    border: none;
+    border-radius: 25px;
+
+    padding: 25px;
+    font-size: 24px;
+}
+
+button:hover {
+    background-color: #222022;
+}
+
+button:active {
+    background-color: #111;
+}
+
+/* Desktop View */
+.button-grid {
+    display: grid;
+    height: calc(calc(100vh) - calc(250px));
+
+    gap: 20px;
+    column-gap: 40px;
+
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+
+    overflow-y: scroll;
+}
+
+/* Mobile View Flexbox flip*/
+@media (max-width: 1200px) {
+    .button-grid {
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);;
+    }
+}

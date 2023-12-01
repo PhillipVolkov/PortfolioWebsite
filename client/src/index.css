@@ -12,6 +12,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-snap-type: y proximity;
 }
 
 body {
@@ -34,9 +35,33 @@ body::-webkit-scrollbar {
 
 /* Hide scrollbar for IE, Edge and Firefox */
 body {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
+  scrollbar-width: none;
 }
+
+/* stylize scrollbar in the case it is necessary */
+  /* width */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #E0E0E1; 
+    border-radius: 15px;
+    display: none;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #2A282A; 
+    border-radius: 15px;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #000;
+    border-radius: 15px;
+  }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
@@ -53,9 +78,13 @@ p {
 
 .page {
   box-sizing: border-box;
+  border-bottom: solid #000;
+
   min-height: 100vh;
   max-height: 100vh;
   height: 100%;
+
+  scroll-snap-align: start;
 }
 
 .banner {
@@ -83,9 +112,42 @@ p {
   background-color: #E0E0E1;
   border-radius: 25px;
   text-align: center;
+  color: #2A282A;
 
   /*border-style: solid;
   box-shadow: 0px 0px 30px 0px #fff;*/
 
   z-index: 1;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1 1 auto;
+  gap: 10px;
+
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.twoColumns {
+  flex: 1 1 50%;
+  height: 100%;
+}
+
+/* Mobile View */
+@media (max-width: 1200px) {
+  .twoColumns {
+    flex: auto;
+    flex-direction: column;
+  }
+}
+
+.flexbox-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1 1 auto;
+
+  max-width: 100%;
+  max-height: 100%;
 }

@@ -187,7 +187,7 @@ const Canvas = props => {
 function Splash() {
   return (
     <div className="Splash">
-      <div className="card" style={{"background":"#2A282A"}}>
+      <div className="card" style={{"background":"#2A282A", "color":"#E0E0E1"}}>
         <img src={profilePicture} className='Circle-Photo'></img>
         <h1>Phillip Volkov</h1>
         <p>Student @ The University of Washington - Seattle</p>

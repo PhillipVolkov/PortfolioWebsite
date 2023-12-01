@@ -1,9 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+
 import './index.css';
+
 import Splash from './Splash/Splash';
-import ProjectsDirectory from './ProjectsDirectory/ProjectsDirectory';
+import About from './About/About';
 import reportWebVitals from './reportWebVitals';
+import Education from './Education/Education';
+import Orgs from './Orgs/Orgs';
+import Projects from './Projects/Projects';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -13,7 +18,19 @@ root.render(
     </div>
 
     <div id="about" className="page">
-      <ProjectsDirectory />
+      <About />
+    </div>
+
+    <div id="education" className="page" style={{backgroundColor:"#D4C4B0"}}>
+      <Education />
+    </div>
+    
+    <div id="organizations" className="page">
+      <Orgs />
+    </div>
+
+    <div id="projects" className="page"  style={{backgroundColor:"#D4C4B0"}}>
+      <Projects />
     </div>
   </React.StrictMode>
 );

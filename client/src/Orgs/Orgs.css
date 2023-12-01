@@ -1,0 +1,49 @@
+.org {
+    background-color: #152b65;
+    text-align: left;
+    color: #E0E0E1;
+
+    max-width: 800px;
+    margin: auto;
+    
+    height: calc(calc(100vh) - calc(220px));
+
+    overflow: auto;
+}
+
+.org-photo {
+    border-radius: 50px;
+    align-items: center;
+
+    width: 100%;
+}
+
+.org-photo-small {
+    border-radius: 50px;
+    align-items: center;
+
+    width: 100%;
+    max-width: 600px;
+}
+
+/* Desktop View*/
+.org-grid {
+    display: grid;
+
+    gap: 20px;
+    column-gap: 40px;
+
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.25fr);
+}
+
+
+/* Mobile View*/
+@media (max-width: 1000px) {
+    .org-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+    
+    .org-photo {
+        width: 100%;
+    }
+}
