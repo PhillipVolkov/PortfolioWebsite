@@ -9,6 +9,7 @@ import reportWebVitals from './reportWebVitals';
 import Education from './Education/Education';
 import Orgs from './Orgs/Orgs';
 import Projects from './Projects/Projects';
+import Skills from './Skills/Skills';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -31,6 +32,10 @@ root.render(
 
     <div id="projects" className="page"  style={{backgroundColor:"#D4C4B0"}}>
       <Projects />
+    </div>
+
+    <div id="skills" className="page">
+      <Skills />
     </div>
   </React.StrictMode>
 );

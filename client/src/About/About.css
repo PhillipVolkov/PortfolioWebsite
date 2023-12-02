@@ -56,7 +56,7 @@
   display:block;
   padding: 10px;
 
-  background-color: #2388d2;
+  background-color: #152b65;
   color: #E0E0E1;
   font-size: 40px;
   text-align: center;
@@ -69,10 +69,10 @@
 }
 
 .action-button:hover{
-  background-color: #1c5a9c;
+  background-color: #122862;
   box-shadow: 10px 5px 10px #666;
 }
 
 .action-button:active {
-  background-color: #152b65;
+  background-color: #09255f;
 }

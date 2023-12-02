@@ -1,0 +1,35 @@
+.skill {
+    background-color: #152b65;
+    text-align: left;
+    color: #E0E0E1;
+    display: flex;
+    align-items: center;
+
+    padding: 5px;
+
+    height: 100px;
+}
+
+.skill img {
+    width: 90px;
+}
+
+/* Desktop View */
+.skill-grid {
+    display: grid;
+
+    gap: 20px;
+    column-gap: 40px;
+
+    grid-template-columns: minmax(0, 100px) minmax(0, 1fr) minmax(0, 100px) minmax(0, 1fr) minmax(0, 100px) minmax(0, 1fr);
+
+    height: calc(calc(100vh) - calc(175px));
+    overflow-y: scroll;
+}
+
+/* Mobile View Flexbox flip*/
+@media (max-width: 1200px) {
+    .skill-grid {
+        grid-template-columns: minmax(0, 100px) minmax(0, 1fr);;
+    }
+}

@@ -28,9 +28,6 @@ function About() {
                         <p>Hi, I'm Phillip Volkov! I'm currently a 3rd year Computer Science major studing at the 
                             <i> University of Washington - Seattle</i>, with experience and interest in software development,
                             machine learning, and robotics.</p>
-                        <br></br>
-                        <p>You can view or download at my résumé on the right, 
-                            or view my experiences in detail below.</p>
 
                         <div className='buttonContainer'>
                             <a className='action-button' href="#education">Education</a>
