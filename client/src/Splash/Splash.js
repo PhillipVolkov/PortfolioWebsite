@@ -198,7 +198,7 @@ function Splash() {
       <Canvas />
 
       
-      <a className="Down-Button Down-Arrow" href="#about" alt='down button'></a>{// eslint-disable-line
+      <a className="Down-Button Down-Arrow" href="/#about" alt='down button'></a>{// eslint-disable-line
       }
     </div>
   );
