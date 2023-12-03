@@ -52,7 +52,6 @@ function Projects() {
     function useOutsideClickCloser(ref) {
         useEffect(() => {
           function handleClickOutside(event) {
-            console.log(ref.current)
             if (ref.current && !ref.current.contains(event.target)) {
                 projectClose();
             }

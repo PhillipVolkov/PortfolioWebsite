@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { Helmet } from 'react-helmet';
 
 import './index.css';
 
@@ -14,6 +15,10 @@ import Skills from './Skills/Skills';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+    <Helmet>
+      <title>Phillip Volkov</title>
+    </Helmet>
+    
     <div id="home" className="page">
       <Splash />
     </div>
