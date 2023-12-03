@@ -76,6 +76,10 @@ p {
   font-size: 18px;
 }
 
+button {
+  user-select: none;
+}
+
 .page {
   box-sizing: border-box;
   border-bottom: solid #000;
@@ -153,4 +157,11 @@ p {
 
   max-width: 100%;
   max-height: 100%;
+}
+
+@media (max-width: 500px) {
+  html {
+    scroll-behavior: none;
+    scroll-snap-type: none;
+  }
 }

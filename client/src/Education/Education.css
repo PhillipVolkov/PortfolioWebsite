@@ -40,6 +40,13 @@
     flex-direction: column;
 }
 
+.uw-photo {
+    width: 400px;
+    background-color: #E0E0E1;
+    border-radius: 50px;
+}
+
+
 /* Mobile View */
 @media (max-width: 2000px) {
     .card-container {
@@ -50,7 +57,7 @@
 /* Mobile View Flexbox flip*/
 @media (max-width: 1200px) {
     .card-container {
-        height: calc(calc(100vh) - calc(875px));
+        height: calc(calc(100vh) - calc(475px));
     }
     
     .big-grid {
@@ -60,10 +67,19 @@
     .fillY {
         height: auto;
     }
-}
 
-.uw-photo {
-    width: 400px;
-    background-color: #E0E0E1;
-    border-radius: 50px;
+    .uw-photo {
+        width: 200px;
+    }
+
+    .big-grid h1 {
+        font-size: 36px;
+        margin: 0px;
+    }
+
+    .big-grid p {
+        font-size: 16px;
+        line-height: 1.25;
+        margin: 5px;
+    }
 }
