@@ -105,7 +105,10 @@ p {
   box-sizing: border-box;
   padding: 25px 10% 0px 10%;
   max-height: 100%;
- }
+
+  transition-property: -moz-filter, -ms-filter, -o-filter, -webkit-filter, filter;
+  transition-duration: 0.4s;
+}
 
 .card {
   padding: 25px;

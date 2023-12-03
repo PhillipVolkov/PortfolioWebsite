@@ -1,9 +1,12 @@
 .org {
-    background-color: #152b65;
-    text-align: left;
-    color: #E0E0E1;
+    box-sizing: border-box;
 
-    max-width: 800px;
+    background-color: #D4C4B0;
+    text-align: left;
+    color: #2A282A;
+    border: solid black;
+
+    min-width: calc(calc(100vw) - calc(20vw));
     margin: auto;
     
     height: calc(calc(100vh) - calc(220px));
@@ -19,11 +22,40 @@
 }
 
 .org-photo-small {
-    border-radius: 50px;
-    align-items: center;
-
     width: 100%;
-    max-width: 600px;
+    max-width: 800px;
+}
+
+.org-container {
+    display: flex;
+    gap: 20px;
+}
+
+.org-card-container {
+    position: relative;
+}
+
+.org-card-container button {
+    position: absolute;
+    top: 50%;
+    padding: 15px;
+    transform: translate(-100%, -50%);
+    
+    font-size: 48px;
+
+    border: none;
+    border-radius: 15px;
+
+    background-color: #152b65;
+    color: #E0E0E1;
+}
+
+.org-card-container button:hover {
+    background-color: #09255f;
+}
+  
+.org-card-container button:active {
+    background-color: #05205a;
 }
 
 /* Desktop View*/
