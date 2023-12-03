@@ -30,10 +30,10 @@ function About() {
                             machine learning, and robotics.</p>
 
                         <div className='buttonContainer'>
-                            <a className='action-button' href="#education">Education</a>
-                            <a className='action-button' href="#organizations">Organizations</a>
-                            <a className='action-button' href="#projects">Projects</a>
-                            <a className='action-button' href="#skills">Skills</a>
+                            <a className='action-button' href="/#education">Education</a>
+                            <a className='action-button' href="/#organizations">Organizations</a>
+                            <a className='action-button' href="/#projects">Projects</a>
+                            <a className='action-button' href="/#skills">Skills</a>
                         </div>
                     </div>
                 </div>
