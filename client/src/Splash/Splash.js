@@ -188,7 +188,7 @@ function Splash() {
   return (
     <div className="Splash">
       <div className="card" style={{"background":"#2A282A", "color":"#E0E0E1"}}>
-        <img src={profilePicture} className='Circle-Photo'></img>
+        <img src={profilePicture} className='Circle-Photo' alt='profile'></img>
         <h1>Phillip Volkov</h1>
         <p>Student @ The University of Washington - Seattle</p>
         <p>Majoring in Computer Science</p>
@@ -197,7 +197,9 @@ function Splash() {
 
       <Canvas />
 
-      <a className="Down-Button Down-Arrow" href="#about"></a>
+      
+      <a className="Down-Button Down-Arrow" href="#about" alt='down button'></a>{// eslint-disable-line
+      }
     </div>
   );
 }

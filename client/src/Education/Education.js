@@ -11,7 +11,7 @@ function Education() {
               <h1>Education</h1>
               <div className='card card-inverse'>
 
-                <img src={UW_Logo} className='uw-photo'></img>
+                <img src={UW_Logo} className='uw-photo' alt='UW-logo'></img>
 
                 <p>University of Washington - Seattle</p>
                 <p>Computer Science - Direct Admit</p>

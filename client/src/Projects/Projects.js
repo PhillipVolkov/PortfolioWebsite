@@ -92,8 +92,8 @@ function Projects() {
             </ul>
 
             <div className='centered-img'>
-                <img src={react} className='small-img'></img>
-                <img src={node} className='small-img'></img>
+                <img src={react} className='small-img' alt='React logo'></img>
+                <img src={node} className='small-img' alt='Node.JS logo'></img>
             </div>
 
             <h3>Explore the webpage to see more!</h3>
@@ -119,9 +119,9 @@ function Projects() {
             </ul>
 
             <p><b>Camera View</b></p>
-            <img src={tennisDemo1}></img>
+            <img src={tennisDemo1} alt='camera View'></img>
             <p><b>Training Results</b></p>
-            <img src={tennisDemo2}></img>
+            <img src={tennisDemo2} alt='training results'></img>
         </div>
     )
     
@@ -182,13 +182,13 @@ function Projects() {
             </ul>
 
             <p><b>Web Page View</b></p>
-            <img src={arduinoDemo1}></img>
+            <img src={arduinoDemo1} alt='web page view'></img>
             <p><b>User Flow Diagram</b></p>
-            <img src={arduinoDemo4}></img>
+            <img src={arduinoDemo4} alt='user flow diagram'></img>
             <p><b>UML Diagram</b></p>
-            <img src={arduinoDemo2}></img>
+            <img src={arduinoDemo2} alt='UML diagram'></img>
             <p><b>Database ERD Diagram</b></p>
-            <img src={arduinoDemo3}></img>
+            <img src={arduinoDemo3} alt='database ERD diagram'></img>
         </div>
     )
 
@@ -210,13 +210,13 @@ function Projects() {
             </ul>
 
             <p><b>Web Page View</b></p>
-            <img src={budgetDemo1}></img>
+            <img src={budgetDemo1} alt='web page view'></img>
             <p><b>User Flow Diagram</b></p>
-            <img src={budgetDemo3}></img>
+            <img src={budgetDemo3} alt='user flow diagram'></img>
             <p><b>UML Diagram</b></p>
-            <img src={budgetDemo2}></img>
+            <img src={budgetDemo2} alt='UML diagram'></img>
             <p><b>Database ERD Diagram</b></p>
-            <img src={budgetDemo4}></img>
+            <img src={budgetDemo4} alt='database ERD diagram'></img>
 
         </div>
     )
@@ -238,7 +238,7 @@ function Projects() {
             </ul>
 
             <p><b>Web Page View</b></p>
-            <img src={chatDemo1}></img>=
+            <img src={chatDemo1} alt='web page view'></img>
         </div>
     )
     
@@ -248,12 +248,12 @@ function Projects() {
     const projectModal = (
         <div id='projectModal' className='modal' ref={modalRef} style={isShown ? {opacity: 1, zIndex: 99} : {opacity: 0, zIndex: -1}}>
             <button onClick={projectClose} className='close-button'>X</button>
-            {shownName == 'portfolio' && portfolioElem}
-            {shownName == 'tennis' && tennisElem}
-            {shownName == 'wiki' && wikiElem}
-            {shownName == 'arduino' && arduinoElem}
-            {shownName == 'budget' && budgetElem}
-            {shownName == 'chat' && chatElem}
+            {shownName === 'portfolio' && portfolioElem}
+            {shownName === 'tennis' && tennisElem}
+            {shownName === 'wiki' && wikiElem}
+            {shownName === 'arduino' && arduinoElem}
+            {shownName === 'budget' && budgetElem}
+            {shownName === 'chat' && chatElem}
         </div>
     );
 
@@ -266,42 +266,42 @@ function Projects() {
 
                 <div className='button-grid'>
                     <button className='project' onClick={(e) => {projectShow(e, "portfolio")}}>
-                        <img src={portfolio}></img>
+                        <img src={portfolio} alt='portfolio project logo'></img>
                         <div className='centered'>
                             <h5>Portfolio Website</h5>
                         </div>
                     </button>
 
                     <button className='project' onClick={(e) => {projectShow(e, "tennis")}}>
-                        <img src={tennis}></img>
+                        <img src={tennis} alt='tennis project logo'></img>
                         <div className='centered'>
                             <h5>Tennis Ball Trajectory Tracking</h5>
                         </div>
                     </button>
 
                     <button className='project' onClick={(e) => {projectShow(e, "wiki")}}>
-                        <img src={wiki}></img>
+                        <img src={wiki} alt='wiki project logo'></img>
                         <div className='centered'>
                             <h5>Wiki Links</h5>
                         </div>
                     </button>
 
                     <button className='project' onClick={(e) => {projectShow(e, "arduino")}}>
-                        <img src={arduino}></img>
+                        <img src={arduino} alt='arduino project logo'></img>
                         <div className='centered'>
                             <h5>Arduino Emulator</h5>
                         </div>
                     </button>
 
                     <button className='project' onClick={(e) => {projectShow(e, "budget")}}>
-                        <img src={budget}></img>
+                        <img src={budget} alt='budget project logo'></img>
                         <div className='centered'>
                             <h5>Budget Application</h5>
                         </div>
                     </button>
 
                     <button className='project' onClick={(e) => {projectShow(e, "chat")}}>
-                        <img src={chat}></img>
+                        <img src={chat} alt='chat project logo'></img>
                         <div className='centered'>
                             <h5>Private Chat App</h5>
                         </div>

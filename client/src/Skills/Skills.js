@@ -18,7 +18,7 @@ function Skills() {
 
             <div className='skill-grid'>
                 <div className='card skill'>
-                    <img src={java}></img>
+                    <img src={java} alt='java logo'></img>
                 </div>
                 <div>
                     <h3>Java / OOP</h3>
@@ -27,7 +27,7 @@ function Skills() {
                 </div>
 
                 <div className='card skill'>
-                    <img src={python}></img>
+                    <img src={python} alt='python logo'></img>
                 </div>
                 <div>
                     <h3>Python</h3>
@@ -36,7 +36,7 @@ function Skills() {
                 </div>
 
                 <div className='card skill'>
-                    <img src={html}></img>
+                    <img src={html} alt='html logo'></img>
                 </div>
                 <div>
                     <h3>HTML / CSS / JavaScript</h3>
@@ -44,7 +44,7 @@ function Skills() {
                 </div>
 
                 <div className='card skill'>
-                    <img src={react}></img>
+                    <img src={react} alt='react logo'></img>
                 </div>
                 <div>
                     <h3>React</h3>
@@ -52,7 +52,7 @@ function Skills() {
                 </div>
                 
                 <div className='card skill'>
-                    <img src={node}></img>
+                    <img src={node} alt='node logo'></img>
                 </div>
                 <div>
                     <h3>Node.js</h3>
@@ -60,7 +60,7 @@ function Skills() {
                 </div>
                 
                 <div className='card skill'>
-                    <img src={sql}></img>
+                    <img src={sql} alt='sql logo'></img>
                 </div>
                 <div>
                     <h3>SQL</h3>
@@ -68,7 +68,7 @@ function Skills() {
                 </div>
 
                 <div className='card skill'>
-                    <img src={yolo}></img>
+                    <img src={yolo} alt='yolo logo'></img>
                 </div>
                 <div>
                     <h3>Computer Vision</h3>
@@ -77,7 +77,7 @@ function Skills() {
                 </div>
 
                 <div className='card skill'>
-                    <img src={ml}></img>
+                    <img src={ml} alt='machine learning logo'></img>
                 </div>
                 <div>
                     <h3>Machine Learning</h3>

@@ -1,6 +1,5 @@
 import React, {useState} from 'react'
 
-import t34 from './t34.jpg'
 import confusion from './confusion_matrix.png'
 import demo from './demo.png'
 import cones from './cones.PNG'
@@ -28,11 +27,11 @@ function Orgs() {
             </ul>
 
             <p><b>Confusion Matrix of the trained Model</b></p>
-            <img src={confusion} className='org-photo-small'></img>
+            <img src={confusion} className='org-photo-small' alt='Confusion Matrix of the trained Model'></img>
             <p><b>Model running on test drive footage</b></p>
-            <img src={cones} className='org-photo-small'></img>
+            <img src={cones} className='org-photo-small'  alt='Model running on test drive footage'></img>
             <p><b>Demonstration of camera ray projection</b></p>
-            <img src={demo} className='org-photo-small'></img>
+            <img src={demo} className='org-photo-small' alt='Demonstration of camera ray projection'></img>
 
             <h2>Simulation Subteam</h2>
             <p><i>01/2023 - 06/2023</i></p>
@@ -59,9 +58,9 @@ function Orgs() {
             </ul>
             
             <p><b>1294 Robot being tested</b></p>
-            <img src={robot} className='org-photo-small'></img>
+            <img src={robot} className='org-photo-small' alt='1294 Robot being tested'></img>
             <p><b>District Championships</b></p>
-            <img src={robot_2} className='org-photo-small'></img>
+            <img src={robot_2} className='org-photo-small' alt='District Championships'></img>
         </div>
     );
 
