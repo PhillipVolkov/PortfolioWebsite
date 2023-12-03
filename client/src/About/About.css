@@ -92,3 +92,11 @@
     justify-content: center;
   }
 }
+
+
+/* Mobile View */
+@media (max-width: 800px) {
+  .action-button {
+    font-size: 14px;
+  }
+}
