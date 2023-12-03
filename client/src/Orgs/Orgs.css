@@ -6,8 +6,8 @@
     color: #2A282A;
     border: solid black;
 
-    min-width: calc(calc(100vw) - calc(20vw));
-    margin: auto;
+    min-width: min(calc(calc(100vw) - calc(20vw)), calc(1000px));
+    max-width: 1000px;
     
     height: calc(calc(100vh) - calc(220px));
 
@@ -23,7 +23,7 @@
 
 .org-photo-small {
     width: 100%;
-    max-width: 800px;
+    max-width: 1000px;
 }
 
 .org-container {
@@ -33,6 +33,7 @@
 
 .org-card-container {
     position: relative;
+    margin: auto;
 }
 
 .org-card-container button {
